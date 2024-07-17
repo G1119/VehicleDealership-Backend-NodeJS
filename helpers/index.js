@@ -2241,6 +2241,7 @@ const updateTotalStock = async () => {
   let total_pages = 1;
   let current_page = 1;
   let vehicles = [];
+  
   while (total_pages >= current_page) {
     const temp = await retrieveStock(current_page, pageSize);
     vehicles = vehicles.concat(temp.results);
